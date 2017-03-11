@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Markup Languages Project TEMPLATE</title>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <style>
+                    table, th{
+                        border: 1px solid black;
+                    }
+                #main {
+                    background-color: gray;
+                }
+                </style>
+    </head>
+    <body>
+        
+        <header>
+            <h1>Czech University of Life Sciences</h1>
+            <h2>Markup Languages XML project</h2>
+            <h3>Table of Content</h3>
+            <ol>
+                <li><a title="Go to this section" href="#intro">Introduction</a></li>
+                <li><a title="Go to this section" href="#tech">Methodology – used technologies</a></li>
+                <li><a title="Go to this section" href="#content">Work content</a></li>
+                <li><a title="Go to this section" href="#elements">Elements description</a></li>
+                <li><a title="Go to this section" href="#transform">Transformation description</a></li>
+                <li><a title="Go to this section" href="#conclusion">Conclusion</a></li>
+            </ol>
+        </header>
+        <article>
+            <br>
+            <br>
+            <h3><a id="intro">Introduction</a></h3>
+            <p>
+            This project is representing a sample list of flight data that airport flight service send to passenger information system. This list is used in airport information system, the system receives information about each flight in XML format, and process it in order to play automatic announcement and send information on the displays. These things can be showed by processing the data from my XML file.
+            </p>
+            <br>
+            <h3><a id="tech">Methodology – used technologies</a></h3>
+            <p>As required in this project, I used:</p>
+            <ul>
+                <li><a title="XML w3school" href="http://www.w3schools.com/xml/">XML</a></li>
+                <li><a title="XML Schema w3school" href="http://www.w3schools.com/xml/schema_intro.asp">XML Schema</a></li>
+                <li><a title="HTML w3school" href="http://www.w3schools.com/html/default.asp">HTML</a></li>
+                <li><a title="XSL Wikipedia" href="https://en.wikipedia.org/wiki/XSL">XSL</a></li>
+                <li><a title="XSLT Wikipedia" href="https://en.wikipedia.org/wiki/XSLT">XSLT</a></li>
+            </ul>
+            <p>
+            Everything was validated by means of <a title="Go to W3C Validator" href="http://validator.w3.org/">W3C Online Validator</a>
+            </p>
+            <br>
+            <h3><a id="content">Work content</a></h3>
+            <p>This project consists of 5 files:</p>
+            <dl>
+                <dt>XML file</dt>
+                <dd>Comprises the main content of the project</dd>
+                <dt>XML Schema file</dt>
+                <dd>Describe the structure of the XML document above</dd>
+                <dt>XSL Transformation file</dt>
+                <dd>Style sheet for XML</dd>
+                <dt>HTML file</dt>
+                <dd>Contains the transforamtion from XML to an HTML table</dd>
+            </dl>
+            <br>
+            <h3><a id="elements">Elements description</a></h3>
+            <p>
+            The root element in XML is &lt;URNO&gt; - ID of each flight.
+            </p>
+            <p>Each &lt;URNO&gt; element contains:</p>
+            <section>
+                <ul>
+                    <li>&lt;flightNumber&gt;</li>
+                    <li>&lt;scheduled&gt;</li>
+                    <li>&lt;destination&gt;</li>
+                    <li>&lt;airlineName&gt;</li>
+                    <li>&lt;originName&gt;</li>
+                    <li>&lt;destinationName&gt;</li>
+                </ul>
+            </section>
+            <br>
+            <h3><a id="transform">Transformation description</a></h3>
+            <p>
+            XSL was used in order to transform XML file data into HTML table is showing a list of flights sorted by scheduled time.
+            </p>
+            <section>
+                <h4>Example of the table (TO BE ADDED)</h4>
+                <table>
+                    <tr id="main">
+                        <th>URNO</th>
+                        <th>flightNumber</th>
+                        <th>destination IATA</th>
+                        <th>scheduled</th>
+                        <th>airlineName</th>
+                        <th>originName</th>
+                        <th>destinationName</th>
+
+                    </tr>
+                    <tr>
+                        <th>800190269</th>
+                        <th>FZ 143</th>
+                        <th>OJAI</th>
+                        <th>2017-03-04T19:35:00+04:00</th>
+                        <th>Flydubai</th>
+                        <th>Dubai</th>
+                        <th>Amman</th>
+                    </tr>
+                    <tr>
+                        <th>1616095425</th>
+                        <th>FZ 143</th>
+                        <th>OJAI</th>
+                        <th>2017-03-04T19:35:00+04:00</th>
+                        <th>Flydubai</th>
+                        <th>Dubai</th>
+                        <th>Amman</th>
+                    </tr>
+                    <tr>
+                        <th>816189766</th>
+                        <th>FZ 143</th>
+                        <th>OJAI</th>
+                        <th>2017-03-04T19:35:00+04:00</th>
+                        <th>Flydubai</th>
+                        <th>Dubai</th>
+                        <th>Amman</th>
+                    </tr>
+                    <tr>
+                        <th>816190415</th>
+                        <th>FZ 143</th>
+                        <th>OJAI</th>
+                        <th>2017-03-04T19:35:00+04:00</th>
+                        <th>Flydubai</th>
+                        <th>Dubai</th>
+                        <th>Amman</th>
+                    </tr>
+                    <tr>
+                        <th>816190657</th>
+                        <th>FZ 143</th>
+                        <th>OJAI</th>
+                        <th>2017-03-04T19:35:00+04:00</th>
+                        <th>Flydubai</th>
+                        <th>Dubai</th>
+                        <th>Amman</th>
+                    </tr>
+                  
+                  
+                  
+                </table>
+            </section>
+            <p>
+            &lt;xsl:for-each&gt;, &lt;xsl:sort&gt;, &lt;xsl:choose&gt; were used to obtain the desired result.
+            </p>
+            <br>
+            <h3><a id="conclusion">Conclusion</a></h3>
+            <p>
+            In Conclusion, during doing thia project I learn how to deal with XML and HTMl documents.
+             </p>
+        </article>
+        <br>
+        <br>
+        <footer>
+            <p>
+            Markup Languages Project 2017 by Viktoriia Pukha.©
+            </p>
+        </footer>
+    </body>
+</html>
